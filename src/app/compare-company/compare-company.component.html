@@ -1,0 +1,49 @@
+<app-user-landing></app-user-landing>
+
+<div style="margin-top:20px;">
+  <h3>Comparation Charts</h3>
+  <hr>
+  <form [formGroup]="chartForm">
+    <div class="form-group">
+      <label for="company1">Add Company</label>
+      <select class="custom-select" id="company1" formControlName="company1" (change)="onChange1($event)">
+        <option *ngFor="let companyItem of companyList" value="{{companyItem.companyCode}}">{{companyItem.companyName}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="company2">Add Company</label>
+      <select class="custom-select" id="company2" formControlName="company2" (change)="onChange2($event)">
+          <option *ngFor="let companyItem of companyList" value="{{companyItem.companyCode}}">{{companyItem.companyName}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="fromPeroid">From Peroid</label>
+      <input type="date" formControlName="fromPeroid" class="form-control" id="fromPeroid">
+    </div>
+    <div class="form-group">
+      <label for="toPeroid">To Peroid</label>
+      <input type="date" formControlName="toPeroid" class="form-control" id="toPeroid">
+    </div>
+    <div class="form-group">
+        <label for="chartType">Charts Type</label>
+        <select class="custom-select" id="chartType">
+          <option>line chart</option>
+          <option>bar chart</option>
+          <option>pie chart</option>
+        </select>
+      </div>
+  </form>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-info btn-block" (click)="compareData()">Generate Charts</button>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:50px;margin-bottom:100px;">
+  <h3>
+    Compare Result:
+  </h3>
+  <hr>
+  <!-- <div echarts [options]="chartOption" style="height:500px;"></div> -->
+</div>

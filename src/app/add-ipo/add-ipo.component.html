@@ -1,0 +1,38 @@
+<app-admin-landing></app-admin-landing>
+<h3 style="margin-top:20px;">Add New IPO</h3>
+<hr>
+<form [formGroup]="addIPOForm">
+  <div class="form-group">
+    <label for="companyName">Company Name</label>
+    <input type="text" formControlName="companyName" class="form-control" id="companyName">
+  </div>
+  <div class="form-group">
+    <label for="stockExchange">Stock Exchange</label>
+    <input type="text" formControlName="stockExchange" class="form-control" id="stockExchange">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" formControlName="price" class="form-control" id="price">
+  </div>
+  <div class="form-group">
+    <label for="totalNumber">Total Number</label>
+    <input type="text" formControlName="totalNumber" class="form-control" id="totalNumber">
+  </div>
+  <div class="form-group">
+    <label for="openDate">Open Date</label>
+    <input type="text" formControlName="openDate" class="form-control" id="openDate">
+  </div>
+  <div class="form-group">
+    <label for="remarks">Remarks</label>
+    <input type="text" formControlName="remarks" class="form-control" id="remarks">
+  </div>
+</form>
+<div class="row"  style="margin-bottom:50px;">
+  <div class="col-md-12">
+    <button type="button" class="btn btn-info btn-block" (click)="addIPO()">Add</button>
+  </div>
+</div>
+
+<div class="alert alert-success" role="alert" style ="margin-top:30px;" *ngIf="isShow">
+Add New IPO successfully !
+</div>

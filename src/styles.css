@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+
+@charset "utf-8";
+
+/*CSS Document*/
+@import url('https://fonts.googleapis.com/css?family=Numans');
+html,body{
+  /* background-image: url('/assets/img/back.jpg'); */
+  background-color: #c27f7f;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{
+  margin: 0;padding: 0;
+
+}
+body{
+  font-size: 14px;
+}
+img{
+  border: none;
+}
+li{
+  list-style: none;
+}
+input,select,textarea{
+  outline: none;
+  border: none;
+}
+textarea{
+  resize: none;
+}
+a{
+  text-decoration: none;
+  color: #270f0f;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clearfix{
+  zoom: 1;
+}
+
+.comWidth{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container{
+  height: 100%;
+  align-content: center;
+  }
+  
+  .card{
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(14, 0, 139, 0.897) !important;
+  }
+  
+  .card-header h3{
+  color: rgb(0, 0, 0);
+  }
+  
+  .input-group-prepend span{
+  width: 50px;
+  background-color: #128dff;
+  color: black;
+  border:0 !important;
+  }
+  
+  input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+  
+  }
+  
+  .login_btn{
+  color: black;
+  background-color: #ff00f2;
+  width: 100px;
+  }
+  
+  .login_btn:hover{
+  color: black;
+  background-color: rgba(136, 83, 83, 0.801);
+  }
+
+  table{
+    text-align: center;
+  }

@@ -1,0 +1,46 @@
+<app-admin-landing></app-admin-landing>
+<h3 style="margin-top:20px;">Add New Company</h3>
+<hr>
+<form [formGroup]="addCompanyForm">
+  <div class="form-group">
+    <label for="companyName">Company Name</label>
+    <input type="text" formControlName="companyName" class="form-control" id="companyName">
+  </div>
+  <div class="form-group">
+    <label for="turnover">Turnover</label>
+    <input type="text" formControlName="turnover" class="form-control" id="turnover">
+  </div>
+  <div class="form-group">
+    <label for="ceo">CEO</label>
+    <input type="text" formControlName="ceo" class="form-control" id="ceo">
+  </div>
+  <div class="form-group">
+    <label for="stockExchange">Stock Exchange</label>
+    <input type="text" formControlName="stockExchange" class="form-control" id="stockExchange">
+  </div>
+  <div class="form-group">
+    <label for="boardDirector">Board of Directors</label>
+    <input type="text" formControlName="boardDirector" class="form-control" id="boardDirector">
+  </div>
+  <div class="form-group">
+    <label for="sector">Sector</label>
+    <input type="text" formControlName="sector" class="form-control" id="sector">
+  </div>
+  <div class="form-group">
+    <label for="writeup">Writeup</label>
+    <input type="text" formControlName="writeup" class="form-control" id="writeup">
+  </div>
+  <div class="form-group">
+    <label for="companyCode">Company Code</label>
+    <input type="text" formControlName="companyCode" class="form-control" id="companyCode">
+  </div>
+</form>
+<div class="row"  style="margin-bottom:50px;">
+  <div class="col-md-12">
+    <button type="button" class="btn btn-info btn-block" (click)="addCompany()">Add</button>
+  </div>
+</div>
+
+<div class="alert alert-info" role="alert" style ="margin-top:30px;" *ngIf="isShow">
+Add New Company successfully !
+</div>

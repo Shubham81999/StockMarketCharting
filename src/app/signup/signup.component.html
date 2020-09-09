@@ -1,0 +1,103 @@
+<div class="sign-content">
+  <h3 class="title-color">Register here</h3>
+  <hr />
+  <form [formGroup]="signupForm">
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label htmlFor="username">Username</label>
+          <input class="form-control" formControlName="username" type="text" placeholder="Username" name="username" id="username" />
+        </div>
+        <div class="form-group">
+          <label htmlFor="password">Password</label>
+          <input class="form-control" formControlName="password" type="password" placeholder="Password" name="password" id="password" />
+        </div>
+        <div class="form-group">
+          <label htmlFor="email">Email</label>
+          <input class="form-control" formControlName="email" type="text" placeholder="Email" name="email" id="email" />
+        </div>
+        <div class="form-group">
+          <label htmlFor="email">Mobile</label>
+          <input class="form-control" formControlName="mobile" type="text" placeholder="Mobile" name="mobile" id="mobile" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-success btn-block" (click)="signUp()">Signup</button>
+      </div>
+    </div> -->
+    <!-- <form #Registerform="ngForm" (ngSubmit)="registerUser()"> -->
+      <!-- <small>{{msg}}</small> -->
+      <div class="form-group row row-register-check">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="loginOptions" id="admin" value="admin">
+          <label class="form-check-label" for="admin">Register as an Admin</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="loginOptions" id="user" value="user">
+          <label class="form-check-label" for="user">Register as a User</label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputFirstName" class="col-sm-2 col-12 col-form-label">First Name</label>
+        <div class="col-sm-3 col-12">
+          <input type="firstName" class="form-control" id="inputFirstName" placeholder="First Name" name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched">
+        </div>
+      <!-- </div>
+      <div class="form-group row"> -->
+        <label for="inputLastName" class="offset-1 col-sm-2 col-12 col-form-label">Last Name</label>
+        <div class="col-sm-3 col-12">
+          <input type="lastName" class="form-control" id="inputLastName" placeholder="Last Name" name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-12 col-form-label">Email</label>
+        <div class="col-sm-3 col-12">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" [(ngModel)]="user.emailId" required 
+          pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+        </div>
+        
+       
+      <!-- </div>
+      <div class="form-group row"> -->
+        <label for="inputPassword" class="offset-1 col-sm-2 col-12 col-form-label">Password</label>
+        <div class="col-sm-3 col-12">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" [(ngModel)]="user.password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched">
+        </div>
+      </div>
+      <div class="row">
+        
+        <div *ngIf="email.errors && (email.invalid && email.touched)" class="col-sm-4 offset-sm-2 col-12">
+          <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+          <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid Email address</small>
+        </div>
+        <div class = "offset-sm-6 col-sm-4">
+          <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+        </div>
+      </div>
+      <div class="form-group row">
+        
+      <!-- </div>
+      <div class="form-group row"> -->
+        <label for="inputUserName" class="col-sm-2 col-12 col-form-label">User Name</label>
+        <div class="col-sm-3 col-12">
+          <input type="userName" class="form-control" id="inputUserName" placeholder="User Name" name="userName" [(ngModel)]="user.userName" #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched">
+        </div>
+        <label for="inputPhoneNumber" class="offset-1 col-sm-2 col-12 col-form-label">Phone Number</label>
+        <div class="col-sm-3 col-12">
+          <input type="phoneNumber" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="user.phoneNumber" #phoneNumber="ngModel" [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched">
+        </div>
+      </div>
+      <div class="form-group row">
+        <button [disabled]="Registerform.form.invalid" name="registrationButton" type="submit" class="offset-4 btn btn-md btn-primary register-button">Register</button>
+      </div>
+      <div class="form-group row already-register-check-row">
+        <!-- <label for="inputcheck" class="col-form-label"> -->
+          If already registered, then <a routerLink="/login">Click here to Login</a>
+        <!-- </label> -->
+        
+      </div>
+    </form>
+  <!-- </form> -->
+</div>

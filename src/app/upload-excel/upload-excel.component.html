@@ -1,0 +1,50 @@
+<app-admin-landing></app-admin-landing>
+<h3 style="margin-top:20px;">
+  Upload Excel
+</h3>
+<hr />
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="file">Select File to upload (in excel format and not more than 2 MB). <a href="../../assets/excel/stock_template.xlsx"> Sample excel</a></label>
+      <input class="form-control-file" type="file" name="file" id="file" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <button type="button" class="btn btn-info btn-sm" (click)="uploadExcel()">Upload</button>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="isShow" style="margin-top: 20px ;">
+  <div class="alert alert-success" role="alert">
+    upload file successfully
+  </div>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>companyName:</td>
+        <td>{{fileUploadResult.companyName}}</td>
+      </tr>
+      <tr>
+        <td>stockExchange:</td>
+        <td>{{fileUploadResult.stockExchange}}</td>
+      </tr>
+      <tr>
+        <td>recordNumber:</td>
+        <td>{{fileUploadResult.recordNumber}}</td>
+      </tr>
+      <tr>
+        <td>fromDate:</td>
+        <td>{{fileUploadResult.fromDate}}</td>
+      </tr>
+      <tr>
+        <td>toDate:</td>
+        <td>{{fileUploadResult.toDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

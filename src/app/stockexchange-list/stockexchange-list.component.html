@@ -1,0 +1,21 @@
+<app-admin-landing></app-admin-landing>
+<h3 style="margin-top:20px;">Stock Exchange List</h3>
+<hr>
+<table class="table table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Stock Exchange</th>
+      <th scope="col">Brife</th>
+      <th scope="col">Address</th>
+      <th scope="col">Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stockExchange of stockExchangeList">
+      <td>{{stockExchange.stockExchange}}</td>
+      <td>{{stockExchange.brief}}</td>
+      <td>{{stockExchange.address}}</td>
+      <td>{{stockExchange.remarks}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,33 @@
+<app-user-landing></app-user-landing>
+
+<div style="margin-top:20px; margin-bottom:50px;">
+    <h3>Update User Profile</h3>
+    <hr>
+    <form [formGroup]="updateProfileForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" id="username" >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" formControlName="password" class="form-control" id="password">
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="text" formControlName="mobile" class="form-control" id="mobile">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" class="form-control" id="email">
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-info btn-block" (click)="updateProfile()">Update</button>
+      </div>
+    </div>
+  
+    <div class="alert alert-success" role="alert" style="margin-top:30px;" *ngIf="isShow">
+      Update Profile successfully !
+    </div>
+  </div>
